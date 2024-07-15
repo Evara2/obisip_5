@@ -20,18 +20,11 @@ def password_generator(length=8):
     return "".join(choice(chars) for x in range(length))
 
 
-# ALTERNATIVE METHODS
-# ctbi= characters that must be in password
-# i= how many letters or characters the password length will be
 def alternative_password_generator(ctbi, i):
-    # Password generator = full boot with random_number, random_letters, and
-    # random_character FUNCTIONS
-    # Put your code here...
+
     i = i - len(ctbi)
     quotient = int(i / 3)
     remainder = i % 3
-    # chars = ctbi + random_letters(ascii_letters, i / 3 + remainder) +
-    #     random_number(digits, i / 3) + random_characters(punctuation, i / 3)
     chars = (
         ctbi
         + random(ascii_letters, quotient + remainder)
@@ -42,7 +35,6 @@ def alternative_password_generator(ctbi, i):
     shuffle(chars)
     return "".join(chars)
 
-    # random is a generalised function for letters, characters and numbers
 
 
 def random(ctbi, i):
@@ -50,15 +42,15 @@ def random(ctbi, i):
 
 
 def random_number(ctbi, i):
-    pass  # Put your code here...
+    pass  
 
 
 def random_letters(ctbi, i):
-    pass  # Put your code here...
+    pass 
 
 
 def random_characters(ctbi, i):
-    pass  # Put your code here...
+    pass  
 
 
 def main():
